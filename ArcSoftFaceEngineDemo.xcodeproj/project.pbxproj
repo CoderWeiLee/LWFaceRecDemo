@@ -247,7 +247,6 @@
 				989DCBEEDE5D4864FE2BAABB /* Pods-ArcSoftFaceEngineDemo.debug.xcconfig */,
 				BA5DD139821DD66B92FD67A2 /* Pods-ArcSoftFaceEngineDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,7 +262,7 @@
 				77FE802920A57ADB00CFA9BB /* Frameworks */,
 				77FE802A20A57ADB00CFA9BB /* Resources */,
 				77FE80CD20A5804C00CFA9BB /* Embed Frameworks */,
-				1DB1538ED9D0A54BA0FE659F /* [CP] Embed Pods Frameworks */,
+				C59F8966BAC55A9D2CCF8C34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,7 +322,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1DB1538ED9D0A54BA0FE659F /* [CP] Embed Pods Frameworks */ = {
+		C59F8966BAC55A9D2CCF8C34 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -545,10 +544,10 @@
 					"$(PROJECT_DIR)/ArcSoftFaceEngineDemo",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcsoft.ArcSoftFaceEngineTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,10 +574,10 @@
 					"$(PROJECT_DIR)/ArcSoftFaceEngineDemo",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcsoft.ArcSoftFaceEngineTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
