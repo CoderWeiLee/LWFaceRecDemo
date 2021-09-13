@@ -29,8 +29,7 @@
 		77FE80C420A57D6700CFA9BB /* FSDKFR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77FE80BB20A57D6700CFA9BB /* FSDKFR.xcdatamodeld */; };
 		77FE80C520A57D6700CFA9BB /* ASFRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FE80BD20A57D6700CFA9BB /* ASFRManager.m */; };
 		77FE80C620A57D6700CFA9BB /* ASFRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FE80BE20A57D6700CFA9BB /* ASFRPerson.m */; };
-		D04AB8AC26EB34E30082BDF0 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AB8AB26EB34E20082BDF0 /* RegisterViewController.m */; };
-		D04AB8AF26EB34F40082BDF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04AB8AE26EB34F40082BDF0 /* LoginViewController.m */; };
+		D008854126EEEF3500C8C8D5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D008854026EEEF3500C8C8D5 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,10 +95,8 @@
 		77FE80BE20A57D6700CFA9BB /* ASFRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFRPerson.m; sourceTree = "<group>"; };
 		989DCBEEDE5D4864FE2BAABB /* Pods-ArcSoftFaceEngineDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcSoftFaceEngineDemo.debug.xcconfig"; path = "Target Support Files/Pods-ArcSoftFaceEngineDemo/Pods-ArcSoftFaceEngineDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BA5DD139821DD66B92FD67A2 /* Pods-ArcSoftFaceEngineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcSoftFaceEngineDemo.release.xcconfig"; path = "Target Support Files/Pods-ArcSoftFaceEngineDemo/Pods-ArcSoftFaceEngineDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D04AB8AA26EB34E20082BDF0 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		D04AB8AB26EB34E20082BDF0 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		D04AB8AD26EB34F40082BDF0 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D04AB8AE26EB34F40082BDF0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D008853F26EEEF3500C8C8D5 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D008854026EEEF3500C8C8D5 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,14 +116,12 @@
 			children = (
 				77FE803220A57ADB00CFA9BB /* ViewController.h */,
 				6558C848213FAC8900BD0265 /* ViewController.mm */,
-				D04AB8AA26EB34E20082BDF0 /* RegisterViewController.h */,
-				D04AB8AB26EB34E20082BDF0 /* RegisterViewController.m */,
-				D04AB8AD26EB34F40082BDF0 /* LoginViewController.h */,
-				D04AB8AE26EB34F40082BDF0 /* LoginViewController.m */,
 				6558C83E213FA37200BD0265 /* ImageCheckController.h */,
 				6558C83F213FA37200BD0265 /* ImageCheckController.m */,
 				6558C843213FAB4000BD0265 /* VideoCheckController.h */,
 				6558C844213FAB4000BD0265 /* VideoCheckController.m */,
+				D008853F26EEEF3500C8C8D5 /* HomeViewController.h */,
+				D008854026EEEF3500C8C8D5 /* HomeViewController.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -388,8 +383,7 @@
 				6558C849213FAC8900BD0265 /* ViewController.mm in Sources */,
 				77FE803120A57ADB00CFA9BB /* AppDelegate.m in Sources */,
 				6558C852213FC36400BD0265 /* ColorFormatUtil.m in Sources */,
-				D04AB8AF26EB34F40082BDF0 /* LoginViewController.m in Sources */,
-				D04AB8AC26EB34E30082BDF0 /* RegisterViewController.m in Sources */,
+				D008854126EEEF3500C8C8D5 /* HomeViewController.m in Sources */,
 				77FE80C420A57D6700CFA9BB /* FSDKFR.xcdatamodeld in Sources */,
 				77FE80C020A57D6700CFA9BB /* GLKitView.m in Sources */,
 				6558C841213FA37200BD0265 /* ImageCheckController.m in Sources */,

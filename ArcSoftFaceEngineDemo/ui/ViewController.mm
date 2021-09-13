@@ -5,6 +5,7 @@
 #import "ViewController.h"
 #import "VideoCheckController.h"
 #import <Masonry/Masonry.h>
+#import "VideoCheckController.h"
 @interface ViewController()
 @property (nonatomic, strong) UIImageView *img;
 @property (nonatomic, strong) UIButton *registerBtn;
@@ -59,11 +60,15 @@
 
 #pragma mark - : 按钮点击
 - (void)registerAction {
-   
+        VideoCheckController *videoC = [[VideoCheckController alloc] init];
+        videoC.operateType = OpetateTypeRegister;
+        [self presentViewController:videoC animated:true completion:nil];
 }
 
 - (void)loginAction {
-    
+    VideoCheckController *videoC = [[VideoCheckController alloc] init];
+    videoC.operateType = OpetateTypeLogin;
+    [self presentViewController:videoC animated:true completion:nil];
 }
 
 

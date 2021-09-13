@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM(NSUInteger, OpetateType) {
+        OpetateTypeRegister,
+        OpetateTypeLogin,
+};
 @interface VideoCheckController : UIViewController
-
+@property (nonatomic, assign) OpetateType operateType;
 @end
