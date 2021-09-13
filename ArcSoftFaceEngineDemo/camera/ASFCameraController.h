@@ -10,6 +10,7 @@
 @interface ASFCameraController : NSObject
 
 @property (nonatomic, weak)     id <ASFCameraControllerDelegate>    delegate;
+@property (nonatomic, strong)     AVCaptureVideoPreviewLayer *previewLayer;
 
 - (BOOL) setupCaptureSession:(AVCaptureVideoOrientation)videoOrientation;
 - (void) startCaptureSession;

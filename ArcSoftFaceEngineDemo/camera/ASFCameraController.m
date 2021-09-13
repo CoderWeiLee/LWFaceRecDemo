@@ -45,7 +45,8 @@
     
     AVCaptureVideoDataOutput *videoOut = [[AVCaptureVideoDataOutput alloc] init];
     [videoOut setAlwaysDiscardsLateVideoFrames:YES];
-    
+    _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:captureSession];
+    _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
 #ifdef __OUTPUT_BGRA__
     NSDictionary *dic = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
 #else

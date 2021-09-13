@@ -30,6 +30,7 @@
 		77FE80C520A57D6700CFA9BB /* ASFRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FE80BD20A57D6700CFA9BB /* ASFRManager.m */; };
 		77FE80C620A57D6700CFA9BB /* ASFRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FE80BE20A57D6700CFA9BB /* ASFRPerson.m */; };
 		D008854126EEEF3500C8C8D5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D008854026EEEF3500C8C8D5 /* HomeViewController.m */; };
+		D008854726EEF98A00C8C8D5 /* ImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D008854526EEF98A00C8C8D5 /* ImageShowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,8 @@
 		BA5DD139821DD66B92FD67A2 /* Pods-ArcSoftFaceEngineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArcSoftFaceEngineDemo.release.xcconfig"; path = "Target Support Files/Pods-ArcSoftFaceEngineDemo/Pods-ArcSoftFaceEngineDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D008853F26EEEF3500C8C8D5 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D008854026EEEF3500C8C8D5 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D008854526EEF98A00C8C8D5 /* ImageShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageShowViewController.m; sourceTree = "<group>"; };
+		D008854626EEF98A00C8C8D5 /* ImageShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageShowViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				6558C844213FAB4000BD0265 /* VideoCheckController.m */,
 				D008853F26EEEF3500C8C8D5 /* HomeViewController.h */,
 				D008854026EEEF3500C8C8D5 /* HomeViewController.m */,
+				D008854626EEF98A00C8C8D5 /* ImageShowViewController.h */,
+				D008854526EEF98A00C8C8D5 /* ImageShowViewController.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D008854726EEF98A00C8C8D5 /* ImageShowViewController.m in Sources */,
 				65354AE62137E36D0066B14C /* ASFVideoProcessor.mm in Sources */,
 				77FE80C320A57D6700CFA9BB /* Utility.m in Sources */,
 				77FE803F20A57ADD00CFA9BB /* main.m in Sources */,

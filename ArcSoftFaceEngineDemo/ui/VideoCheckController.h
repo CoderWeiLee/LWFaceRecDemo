@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreMotion/CoreMotion.h>
 typedef NS_ENUM(NSUInteger, OpetateType) {
         OpetateTypeRegister,
         OpetateTypeLogin,
 };
 @interface VideoCheckController : UIViewController
 @property (nonatomic, assign) OpetateType operateType;
+@property(nonatomic,strong)CMMotionManager *motionManager;
 @end
