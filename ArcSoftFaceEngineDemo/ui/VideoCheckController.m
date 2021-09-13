@@ -14,7 +14,6 @@
 #import <ArcSoftFaceEngine/ArcSoftFaceEngine.h>
 #import "HomeViewController.h"
 #import "ASFCameraController.h"
-#import "ImageShowViewController.h"
 #define IMAGE_WIDTH     720
 #define IMAGE_HEIGHT    1280
 
@@ -36,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet GLKitView *glView;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIButton *buttonRegister;
-
+@property (nonatomic, copy) NSString *userName;
 @end
 
 @implementation VideoCheckController
@@ -217,13 +216,14 @@
                             [UIView animateWithDuration:1.3 animations:^{
                                 self->showImageView.transform =CGAffineTransformMakeScale(0.7, 0.7);
                             } completion:^(BOOL finished) {
-                                ImageShowViewController *vc = [[ImageShowViewController alloc] init];
-                                vc.image = resultImage;
-                                double delayInSeconds = 2.0;
+                                HomeViewController *homeVc = [[HomeViewController alloc] init];
+                                homeVc.userName = weakself.userName;
+                                homeVc.icon = resultImage;
+                                double delayInSeconds = 1.0;
                                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
                                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 
-                                    [weakself presentViewController:vc animated:false completion:nil];
+                                    [weakself presentViewController:homeVc animated:false completion:nil];
                                 });
 
 
@@ -246,9 +246,9 @@
     if (personName != nil) {
         NSString *result = [NSString stringWithFormat:@"欢迎登录，%@",personName];
         self.labelName.text = result;
-        HomeViewController *homeVc = [[HomeViewController alloc] init];
-        homeVc.userName = result;
-//        [self presentViewController:homeVc animated:YES completion:nil];
+        self.userName = result;
+    }else {
+        self.labelName.text = @"正在检测...";
     }
 }
 
