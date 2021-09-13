@@ -3,7 +3,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import <ArcSoftFaceEngine/ArcSoftFaceEngine.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#define kRegisterKey @"kRegisterKey"
 @interface AppDelegate ()
 @end
 
@@ -11,8 +13,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    [self testHttp];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults objectForKey:kRegisterKey]) {
+        NSString *appid = @"7eEDMz6aAZkDtFn798zSgbuk5R8TBJcV4c4fCpBtmNSF";
+        NSString *sdkkey = @"3y9Lw2NyCNP8Qp4ktV1Xu8ZZPBvKejzkbagnAxjA6QAi";
+        ArcSoftFaceEngine *engine = [[ArcSoftFaceEngine alloc] init];
+        MRESULT mr = [engine activeWithAppId:appid SDKKey:sdkkey];
+        MBProgressHUD *hud = [MBProgressHUD HUDForView:[UIApplication sharedApplication].keyWindow];
+        if (mr == ASF_MOK) {
+            hud.label.text = @"SDK激活成功";
+        } else if(mr == MERR_ASF_ALREADY_ACTIVATED){
+            hud.label.text = @"SDK已激活";
+        } else {
+            hud.label.text = [NSString stringWithFormat:@"SDK激活失败：%ld", mr];
+        }
+        hud.mode = MBProgressHUDModeText;
+        [hud showAnimated:YES];
+        [hud hideAnimated:YES afterDelay:1.0];
+        [defaults setObject:@(YES) forKey:kRegisterKey];
+        [defaults synchronize];
+    }
     return YES;
 }
 

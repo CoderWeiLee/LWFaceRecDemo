@@ -8,4 +8,5 @@ target 'ArcSoftFaceEngineDemo' do
   use_frameworks!
   # Pods for ArcSoftFaceEngineDemo
     pod 'Masonry'
+    pod 'MBProgressHUD'
 end
