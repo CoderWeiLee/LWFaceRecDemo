@@ -137,27 +137,12 @@
             }
         }
         
-//        for (NSUInteger face = 0; face < arrayFaceInfo.count; face++) {
-//            UIView *faceRectView = [self.arrayAllFaceRectView objectAtIndex:face];
-//            ASFVideoFaceInfo *faceInfo = [arrayFaceInfo objectAtIndex:face];
-//            faceRectView.hidden = NO;
-//            faceRectView.frame = [self dataFaceRect2ViewFaceRect:faceInfo.faceRect];
-//            UILabel* labelInfo = (UILabel*)[faceRectView viewWithTag:1];
-//            [labelInfo setTextColor:[UIColor yellowColor]];
-//            labelInfo.font = [UIFont boldSystemFontOfSize:15];
-//            MInt32 gender = faceInfo.gender;
-//            NSString *genderInfo = gender == 0 ? @"男" : (gender == 1 ? @"女" : @"不确定");
-//            NSString *liveness = faceInfo.liveness == 1 ? @"活体" : (faceInfo.liveness == 0) ? @"非活体":@"未知";
-//            labelInfo.text = [NSString stringWithFormat:@"age:%d gender:%@ live:%@", faceInfo.age, genderInfo, liveness];
-//            UILabel* labelFaceAngle = (UILabel*)[faceRectView viewWithTag:6];
-//            labelFaceAngle.font = [UIFont boldSystemFontOfSize:15];
-//            [labelFaceAngle setTextColor:[UIColor yellowColor]];
-//            if(faceInfo.face3DAngle.status == 0) {
-//                labelFaceAngle.text = [NSString stringWithFormat:@"r=%.2f y=%.2f p=%.2f", faceInfo.face3DAngle.rollAngle, faceInfo.face3DAngle.yawAngle, faceInfo.face3DAngle.pitchAngle];
-//            } else {
-//                labelFaceAngle.text = @"Failed face 3D Angle";
-//            }
-//        }
+        for (NSUInteger face = 0; face < arrayFaceInfo.count; face++) {
+            UIView *faceRectView = [self.arrayAllFaceRectView objectAtIndex:face];
+            ASFVideoFaceInfo *faceInfo = [arrayFaceInfo objectAtIndex:face];
+            faceRectView.hidden = NO;
+            faceRectView.frame = [self dataFaceRect2ViewFaceRect:faceInfo.faceRect];
+        }
     });
     [Utility freeCameraData:cameraData];
 }
